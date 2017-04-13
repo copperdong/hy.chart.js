@@ -1,0 +1,24 @@
+{
+  "name": "chart_k",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --entry ./index.js --watch --content-base ./ --port 9999 --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hhhyaaon/chart_k.git"
+  },
+  "author": "hhhyaaon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hhhyaaon/chart_k/issues"
+  },
+  "homepage": "https://github.com/hhhyaaon/chart_k#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1"
+  }
+}

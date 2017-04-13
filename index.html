@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            font-size: 62.5%;
+        }
+        
+        body {
+            font-size: 1.6rem;
+        }
+        
+        canvas {
+            border: 0.01rem solid #e3e3e3;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>分时图</legend>
+        <div id="box">
+            <canvas id="chart_min"></canvas>
+            <canvas id="chart_volume"></canvas>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>k线</legend>
+        <div id="box1">
+            <canvas id="chart_k"></canvas>
+        </div>
+    </fieldset>
+
+    <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script src="./utils/chart.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
