@@ -1,8 +1,11 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta name="referrer" content="always">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
     <style>
         * {
             margin: 0;
@@ -17,29 +20,60 @@
             font-size: 1.6rem;
         }
         
-        canvas {
+        [id^=box] {
+            position: relative;
             border: 0.01rem solid #e3e3e3;
+            margin: 10px 30px;
+        }
+        
+        .chart-container {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+        }
+        
+        .chart-y {
+            position: absolute;
+            border-top: 1px solid red;
+            width: 100%;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        
+        .chart-x {
+            position: absolute;
+            border-left: 1px solid blue;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        
+        .chart-info {
+            background-color: gray;
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            font-size: 1.2rem;
+            line-height: 1;
+            right: 0;
         }
     </style>
 </head>
 
 <body>
+    <div id="box_min"></div>
+    <div id="box_vol"></div>
+    <div id="box_k"></div>
     <fieldset>
-        <legend>分时图</legend>
-        <div id="box">
-            <canvas id="chart_min"></canvas>
-            <canvas id="chart_volume"></canvas>
-        </div>
-    </fieldset>
-
-    <fieldset>
-        <legend>k线</legend>
-        <div id="box1">
-            <canvas id="chart_k"></canvas>
-        </div>
+        <legend>log</legend>
+        <div id="log"></div>
     </fieldset>
 
     <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script src="./utils/polyfill.js"></script>
     <script src="./utils/chart.js"></script>
     <script src="./index.js"></script>
 </body>
